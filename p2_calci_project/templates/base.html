@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calci App</title>
+    <style>
+        * {
+            font-size: 40px;
+            font-family: Cambria;
+        }
+        .nav {
+            background-color: black;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 30px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <center>
+        <div class="nav">
+            <a href="{% url 'square' %}">
+Square</a>
+<a href="{% url 'cube' %}">Cube</a>
+<a href="{% url 'sqrt' %}">SquareRoot</a>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </center>
+</body>
+</html>

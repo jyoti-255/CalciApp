@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Square Root Page</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="number" step="0.01" name="num" placeholder="Enter number" required value="{{ num|default:'' }}" min="0.0"/>
+    <br/><br/>
+    <input type="submit" value="Find Square Root"/>
+</form>
+<h2>{{ msg }}</h2>
+{% endblock %}
